@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quicklist</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <img src="quicklist-logo.svg" alt="Quicklist" class="logo">
+        </header>
+
+        <nav>
+            <a href="#" class="voltar">← Voltar</a>
+        </nav>
+
+        <main>
+            <h1>Compras da semana</h1>
+
+            <div class="input-container">
+                <input type="text" placeholder="Adicione um novo item" class="novo-item">
+                <button class="adicionar-btn">Adicionar item</button>
+            </div>
+
+            <ul class="lista-items">
+                <li>
+                    <input type="checkbox" id="item1">
+                    <label for="item1">Pão de forma</label>
+                    <button class="delete-btn">🗑</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="item2">
+                    <label for="item2">Café preto</label>
+                    <button class="delete-btn">🗑</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="item3">
+                    <label for="item3">Suco de laranja</label>
+                    <button class="delete-btn">🗑</button>
+                </li>
+                <li>
+                    <input type="checkbox" id="item4">
+                    <label for="item4">Bolacha</label>
+                    <button class="delete-btn">🗑</button>
+                </li>
+            </ul>
+
+            <div class="notification">
+                <span>O item foi removido da lista</span>
+                <button class="close-btn">×</button>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

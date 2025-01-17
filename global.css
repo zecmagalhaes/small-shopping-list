@@ -17,7 +17,7 @@
   
   --font-family: "Inter", serif;
   --title: 700 1.5rem/100% var(--font-family);
-  --label: 600 1rem/100% var(--font-family);
+  --label: 400 1rem/100% var(--font-family);
   --paragraph: 500 1rem/100% var(--font-family);
   --link: 500 1rem/100% var(--font-family);
 }

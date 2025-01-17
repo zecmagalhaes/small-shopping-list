@@ -21,7 +21,7 @@ header {
 }
 
 .logo {
-  height: 40px;
+  height: 2.5rem;
 }
 
 .voltar {
@@ -34,28 +34,37 @@ header {
 
 h1 {
   color: var(--content-primary);
-  margin-bottom: 20px;
+  margin-bottom: 2.5rem;
 }
 
 .input-container {
   display: flex;
-  gap: 10px;
-  margin-bottom: 30px;
+  gap: 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+input[type="text"]:hover {
+  border-color: var(--color-brand);
+}
+
+input[type="text"]:focus {
+  outline: 0.0625rem solid var(--color-brand);
+  box-shadow: 0 0 10px var(--color-brand);
 }
 
 .novo-item {
   flex: 1;
-  padding: 12px;
+  padding: 0.75rem;
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   font-size: 16px;
 }
 
 .adicionar-btn {
-  background-color: #d6336c;
-  color: white;
+  background-color: var(--color-brand);
+  color: var(--always-white);
   border: none;
-  border-radius: 8px;
+  border-radius: 0.75rem;
   padding: 12px 24px;
   cursor: pointer;
 }
@@ -65,13 +74,12 @@ h1 {
 }
 
 .lista-items li {
-  background-color: white;
-  padding: 16px;
-  border-radius: 8px;
-  margin-bottom: 8px;
+  background-color: var(--background-secondary);
+  padding: 0.55rem;
+  border-radius: 0.75rem;
+  margin-bottom: 0.5rem;
   display: flex;
   align-items: center;
-  gap: 10px;
 }
 
 .delete-btn {
@@ -82,39 +90,31 @@ h1 {
 }
 
 .notification {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #dc3545;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
+  background-color: var(--color-danger);
+  color: var(--always-white);
+  margin: auto;
+  max-width: 25.5rem;
+  padding: .50rem 1.5rem;
+  border-radius: .75rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: .625rem;
+  box-shadow: 0 0 5px var(--color-brand);
+}
+
+.alert {
+  background: none;
+  border: none;
+  color: var(--always-white);
 }
 
 .close-btn {
+  margin-left: auto;
   background: none;
   border: none;
-  color: white;
-  font-size: 20px;
+  color: var(--always-white);
   cursor: pointer;
 }
-
-/* input[type="checkbox"] {
-  appearance: none;
-  width: 1rem;
-  height: 1rem;
-  background-color: solid var(--background-secondary);
-  border: 0.125rem solid var(--border-primary);
-  border-radius: 0.25rem;
-}
-
-input[type="checkbox"]:checked {
-  background-color: var(--color-brand);
-} */
 
 input[type="checkbox"] {
   display: none;
@@ -122,6 +122,8 @@ input[type="checkbox"] {
 
 .custom-checkbox {
   display: inline-block;
+  object-fit: cover;
+  margin-right: 0.25rem;
   width: 1rem;
   height: 1rem;
   background-image: url("./assets/icons/check-box-initial.svg");
@@ -129,9 +131,9 @@ input[type="checkbox"] {
 }
 
 .custom-checkbox:hover {
-    background-image: url('./assets/icons/check-box-hover.svg');
+  background-image: url("./assets/icons/check-box-hover.svg");
 }
 
 input[type="checkbox"]:checked + .custom-checkbox {
-    background-image: url('./assets/icons/check-box-checked.svg');
+  background-image: url("./assets/icons/check-box-checked.svg");
 }

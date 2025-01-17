@@ -9,6 +9,7 @@
 
 .paragraph {
   font: var(--paragraph);
+  color: var(--content-secondary);
 }
 
 .link {

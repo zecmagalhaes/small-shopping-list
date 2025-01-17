@@ -7,7 +7,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Quicklist</title>
     <link rel="stylesheet" href="index.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <div class="container">
@@ -26,34 +29,41 @@
           <input
             type="text"
             placeholder="Adicione um novo item"
-            class="novo-item "
+            class="novo-item label"
           />
-          <button class="adicionar-btn">Adicionar item</button>
+          <button class="adicionar-btn label">Adicionar item</button>
         </div>
 
         <ul class="lista-items">
           <li>
             <label for="item1">
-              <input type="checkbox" id="item1"/>
+              <input type="checkbox" id="item1" />
               <span class="custom-checkbox"></span>
-              <span>Pão de forma</span>
+              <span class="paragraph">Pão de forma</span>
             </label>
-              <button class="delete-btn">
-                <img src="assets/icons/icon delete.svg" alt="Botão de lixeira" />
-              </button>
+            <button class="delete-btn">
+              <img src="assets/icons/icon delete.svg" alt="Botão de lixeira" />
+            </button>
           </li>
           <li>
-            <input type="checkbox" id="item2" />
-            <label for="item2">Café preto</label>
+            <label for="item2">
+              <input type="checkbox" id="item2" />
+              <span class="custom-checkbox"></span>
+              <span class="paragraph">Café</span>
+            </label>
             <button class="delete-btn">
               <img src="assets/icons/icon delete.svg" alt="Botão de lixeira" />
             </button>
           </li>
         </ul>
-
-        <div class="notification">
-          <span>O item foi removido da lista</span>
-          <button class="close-btn">x</button>
+        <div class="notification label">
+          <button class="alert">
+            <img src="assets/icons/warning-circle-filled.svg" alt="Ícone de fechar" />
+          </button>
+          <span>O item foi removido da lista!</span>
+          <button class="close-btn">
+            <img src="assets/icons/delete-small.svg" alt="Ícone de fechar" />
+          </button>
         </div>
       </main>
     </div>

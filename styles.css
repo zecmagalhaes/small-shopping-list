@@ -5,30 +5,30 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: var(--background-primary);
 }
 
 .container {
-  max-width: 800px;
+  max-width: 50rem;
+  min-height: 100vh;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
 }
 
 header {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
 }
 
 .logo {
   height: 2.5rem;
 }
 
-.voltar {
+.back {
   color: var(--color-brand);
   font: var(--link);
   text-decoration: none;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   display: inline-block;
 }
 
@@ -40,7 +40,22 @@ h1 {
 .input-container {
   display: flex;
   gap: 0.625rem;
-  margin-bottom: 1.875rem;
+  margin-bottom: 1rem;
+}
+
+.btn-remove-select {
+  display: flex;
+  gap: 0.625rem;
+  margin-bottom: 1rem;
+}
+
+.select-btn {
+  background-color: var(--color-select);
+  color: var(--always-white);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
 }
 
 input[type="text"]:hover {
@@ -49,31 +64,31 @@ input[type="text"]:hover {
 
 input[type="text"]:focus {
   outline: 0.0625rem solid var(--color-brand);
-  box-shadow: 0 0 10px var(--color-brand);
+  box-shadow: 0 0 0.625rem var(--color-brand);
 }
 
-.novo-item {
+.new-item {
   flex: 1;
   padding: 0.75rem;
-  border: 1px solid #ddd;
+  border: 0.125rem solid var(--border-primary);
   border-radius: 0.75rem;
   font-size: 16px;
 }
 
-.adicionar-btn {
+.add-btn {
   background-color: var(--color-brand);
   color: var(--always-white);
   border: none;
   border-radius: 0.75rem;
-  padding: 12px 24px;
+  padding: 0.75rem 1.5rem;
   cursor: pointer;
 }
 
-.lista-items {
+.list-items {
   list-style: none;
 }
 
-.lista-items li {
+.list-items li {
   background-color: var(--background-secondary);
   padding: 0.55rem;
   border-radius: 0.75rem;
@@ -92,14 +107,20 @@ input[type="text"]:focus {
 .notification {
   background-color: var(--color-danger);
   color: var(--always-white);
-  margin: auto;
-  max-width: 25.5rem;
-  padding: .50rem 1.5rem;
-  border-radius: .75rem;
-  display: flex;
-  align-items: center;
-  gap: .625rem;
   box-shadow: 0 0 5px var(--color-brand);
+  display: none;
+  margin: 1rem auto;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  max-width: 20rem;
+  width: 100%;
+  z-index: 9999;
+  gap: 0.625rem;
+}
+
+.notification span:nth-child(2) {
+  font-size: 0.85rem;
 }
 
 .alert {
@@ -109,6 +130,8 @@ input[type="text"]:focus {
 }
 
 .close-btn {
+  display: flex;
+  align-items: center;
   margin-left: auto;
   background: none;
   border: none;
@@ -136,4 +159,47 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked + .custom-checkbox {
   background-image: url("./assets/icons/check-box-checked.svg");
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
+  .notification .alert img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+
+  .notification .close-btn img {
+    width: 0.875rem;
+    height: 0.875rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .notification span:nth-child(2) {
+    font-size: 0.75rem;
+  }
+
+  .notification {
+    max-width: 18rem;
+  }
+
+  .notification .alert img {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+
+  .notification .close-btn img {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (max-width: 495px) {
+  .input-container, .btn-remove-select {
+    flex-direction: column;
+  }
+
+  .input-container button {
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
 }

@@ -15,13 +15,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function adicionarItem() {
-
     if (input.value.trim() === "") return
 
     const novoItemLi = document.createElement("li")
+    const idNewItemLi = listItems.children.length + 1
     novoItemLi.innerHTML = `
-      <label for="item${listItems.children.length + 1}">
-        <input type="checkbox" id="item${listItems.children.length + 1}" />
+      <label for="item${idNewItemLi}">
+        <input type="checkbox" id="item${idNewItemLi}"/>
         <span class="custom-checkbox"></span>
         <span class="paragraph">${input.value}</span>
       </label>
@@ -35,7 +35,25 @@ document.addEventListener("DOMContentLoaded", () => {
     input.value = ""
 
     novoItemLi.querySelector(".delete-btn").addEventListener("click", () => {
-      removerItem(novoItemLi)
+      const isChecked = novoItemLi.querySelector(`#item${idNewItemLi}`).checked
+
+      if (isChecked) {
+        removerItem(novoItemLi)
+      } else {
+        notification.textContent = "Marque o item para conseguir remover"
+
+        notification.style.display = "flex"
+
+        notification.style.backgroundColor = getComputedStyle(
+          document.documentElement
+        ).getPropertyValue("--content-secondary")
+
+        notification.style.boxShadow = `0 0 5px var(--content-tertiary)`
+
+        setTimeout(() => {
+          notification.style.display = "none"
+        }, 2000)
+      }
     })
   }
 

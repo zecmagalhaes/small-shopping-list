@@ -32,8 +32,12 @@
             <button class="add-btn label">Adicionar item</button>
           </div>
           <div class="btn-remove-select">
-            <button class="select-btn label">Selecionar Todos</button>
-            <button class="select-btn label">Remover Selecionados</button>
+            <button id="selectall" class="select-btn label">
+              Selecionar Todos
+            </button>
+            <button id="removeallselect" class="select-btn label">
+              Remover Selecionados
+            </button>
           </div>
           <ul class="list-items"></ul>
         </div>
@@ -45,7 +49,7 @@
             alt="Ícone de fechar"
           />
         </span>
-        <span>O item foi removido da lista!</span>
+        <span id="notification-message">O item foi removido da lista!</span>
         <button class="close-btn">
           <img src="assets/icons/delete-small.svg" alt="Ícone de fechar" />
         </button>

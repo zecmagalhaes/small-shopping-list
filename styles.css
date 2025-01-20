@@ -90,6 +90,7 @@ input[type="text"]:focus {
 
 .list-items li {
   background-color: var(--background-secondary);
+  box-shadow: 0 0 2px var(--color-select);
   padding: 0.55rem;
   border-radius: 0.75rem;
   margin-bottom: 0.5rem;
@@ -194,12 +195,19 @@ input[type="checkbox"]:checked + .custom-checkbox {
 }
 
 @media (max-width: 495px) {
-  .input-container, .btn-remove-select {
+  .input-container,
+  .btn-remove-select {
     flex-direction: column;
   }
 
-  .input-container button {
+  .input-container button,
+  .btn-remove-select button,
+  .list-items span {
     font-size: 0.875rem;
     font-weight: 500;
   }
+}
+
+.paragraph {
+  word-break: break-word;
 }

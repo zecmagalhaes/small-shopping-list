@@ -1,57 +1,60 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <title>Quicklist</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="index.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="container">
-        <header>
-            <img src="quicklist-logo.svg" alt="Quicklist" class="logo">
-        </header>
-
-        <nav>
-            <a href="#" class="voltar">← Voltar</a>
-        </nav>
-
-        <main>
-            <h1>Compras da semana</h1>
-
-            <div class="input-container">
-                <input type="text" placeholder="Adicione um novo item" class="novo-item">
-                <button class="adicionar-btn">Adicionar item</button>
-            </div>
-
-            <ul class="lista-items">
-                <li>
-                    <input type="checkbox" id="item1">
-                    <label for="item1">Pão de forma</label>
-                    <button class="delete-btn">🗑</button>
-                </li>
-                <li>
-                    <input type="checkbox" id="item2">
-                    <label for="item2">Café preto</label>
-                    <button class="delete-btn">🗑</button>
-                </li>
-                <li>
-                    <input type="checkbox" id="item3">
-                    <label for="item3">Suco de laranja</label>
-                    <button class="delete-btn">🗑</button>
-                </li>
-                <li>
-                    <input type="checkbox" id="item4">
-                    <label for="item4">Bolacha</label>
-                    <button class="delete-btn">🗑</button>
-                </li>
-            </ul>
-
-            <div class="notification">
-                <span>O item foi removido da lista</span>
-                <button class="close-btn">×</button>
-            </div>
-        </main>
+      <header>
+        <img src="assets/icons/logo.svg" alt="Quicklist" class="logo" />
+      </header>
+      <nav>
+        <a href="#" class="back"><- Voltar</a>
+      </nav>
+      <main>
+        <div>
+          <h1 class="title">Compras da semana</h1>
+          <div class="input-container">
+            <input
+              type="text"
+              placeholder="Adicione um novo item"
+              class="new-item label"
+            />
+            <button class="add-btn label">Adicionar item</button>
+          </div>
+          <div class="btn-remove-select">
+            <button id="selectall" class="select-btn label">
+              Selecionar Todos
+            </button>
+            <button id="removeallselect" class="select-btn label">
+              Remover Selecionados
+            </button>
+          </div>
+          <ul class="list-items"></ul>
+        </div>
+      </main>
+      <div class="notification label">
+        <span class="alert">
+          <img
+            src="assets/icons/warning-circle-filled.svg"
+            alt="Ícone de fechar"
+          />
+        </span>
+        <span id="notification-message">O item foi removido da lista!</span>
+        <button class="close-btn">
+          <img src="assets/icons/delete-small.svg" alt="Ícone de fechar" />
+        </button>
+      </div>
     </div>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>

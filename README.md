@@ -1,7 +1,7 @@
 # QuickList | JavaScript
 
 ## 📝 Descrição do Projeto
-Uma aplicação web de uma to do shopping list desenvolvida com JavaScript.
+Uma aplicação web to do shopping list desenvolvida com JavaScript.
 
 ## 🌐 Como Acessar
 Você pode acessar a aplicação utilizando um computador, tablet ou celular notebook ou dispositivo de sua preferência.
